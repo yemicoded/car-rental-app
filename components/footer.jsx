@@ -62,14 +62,14 @@ export default function Footer({ classname, children }) {
 
       <div className='lg:w-[90%] mx-auto border-t-2 py-4 mt-6 lg:flex items-ccenter justify-between'>
         <span className='hidden lg:block font-semibold text-secondary-500 dark:text-secondary-200'>
-          ©2022 MORENT. All rights reserved
+          ©2022 MORENT. Developed by <span className="text-primary-500 font-bold">Oloko Sodiq</span>
         </span>
         <div className='flex gap-4 justify-between lg:justify-end font-semibold text-secondary-500 dark:text-secondary-200'>
           <span>Privacy & Policy</span>
           <span>Terms & Condition</span>
         </div>
         <span className='lg:hidden inline-block mt-6 font-semibold text-secondary-500 dark:text-secondary-200'>
-          ©2022 MORENT. All rights reserved
+          ©2022 MORENT. Developed by <span className="text-primary-500 font-bold">Oloko Sodiq</span>
         </span>
       </div>
     </div>
