@@ -45,7 +45,7 @@ export default function CategoryWrapper({ classname, children }) {
         <DeliveryType />
         <div className=''>
           <CarList />
-          {Cars.length>0 && <div className='py-8 flex justify-center'>
+          {Cars?.length>0 && <div className='py-8 flex justify-center'>
             <Paginate />
           </div>}
         </div>

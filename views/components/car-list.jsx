@@ -30,12 +30,10 @@ export default function CarList({ classname, children }) {
     );
   }
   return (
-    <div>
       <div className={classes}>
         {Cars?.map((car) => (
           <Card key={car._id} car={car} />
         ))}
       </div>
-    </div>
   );
 }
