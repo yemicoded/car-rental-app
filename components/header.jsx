@@ -56,7 +56,10 @@ export default function Header({ classname, children }) {
         <div className='hidden lg:flex px-4 w-full items-center justify-center gap-4'>
           {navbarLinks.map((link) => (
             <Link key={link.id} href={link.route}>
-              <a className='font-medium mx-6'>{link.label}</a>
+              <div className="flex items-center gap-1 mx-4 hover:cursor-pointer">
+                {link.icon}
+                <a className='font-medium mx-6'>{link.label}</a>
+              </div>
             </Link>
           ))}
           {/* <h3 className='font-semibold text-lg text-secondary-400 px-4'>ToS</h3> */}

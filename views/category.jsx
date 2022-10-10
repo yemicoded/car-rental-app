@@ -23,19 +23,19 @@ export default function CategoryWrapper({ classname, children }) {
   const currentPage = useFilter((state) => state.currentPage);
   // const {category, page, capacity} = router.query
   
-  React.useEffect(() => {
-  const { category, page, capacity } = router.query;
+  // React.useEffect(() => {
+  // const { category, page, capacity } = router.query;
 
-    if (
-      currentPage
-    ) {
-      router.push(
-        `${router.pathname}?page=${currentPage}`
-      );
-    } else {
-      router.push("/products");
-    }
-  }, [currentPage]);
+  //   if (
+  //     currentPage
+  //   ) {
+  //     router.push(
+  //       `${router.pathname}?page=${currentPage}`
+  //     );
+  //   } else {
+  //     router.push("/products");
+  //   }
+  // }, [currentPage]);
 
   const classes = clx("flex", classname);
   return (

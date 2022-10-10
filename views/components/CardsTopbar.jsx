@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { clx } from '../../helpers/clx'
 
@@ -17,7 +18,9 @@ export default function CardsTopBar({
             {heading}
           </span>
           {!noLink && (
-            <span className='text-primary-500 font-medium'>view all</span>
+            <Link href='/products'>
+              <span className='text-primary-500 font-medium hover:cursor-pointer'>view all</span>
+            </Link>
           )}
         </div>
       );
