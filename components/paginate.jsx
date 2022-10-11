@@ -15,15 +15,22 @@ export default function Paginate({ classname, children }) {
 
   const getNextPage = () => {
     if (activePage !== pageList.length) {
+      window.scrollTo(0,0)
       setPage(activePage + 1);
     }
   };
 
   const getPrevPage = () => {
     if (activePage !== 1) {
+      window.scrollTo(0, 0);
       setPage(activePage - 1);
     }
   };
+
+  const onLabelClick = (param) => {
+    window.scrollTo(0, 0);
+    setPage(param);
+  }
 
   React.useEffect(() => {
     if (filteredCars?.length <= perPageCount) {
@@ -46,7 +53,7 @@ export default function Paginate({ classname, children }) {
           <IconButton
             key={pageNumber}
             variant={pageNumber === activePage ? "contained" : "outlined"}
-            onclick={() => setPage(pageNumber)}
+            onclick={() => onLabelClick(pageNumber)}
             rounded
           >
             {pageNumber}

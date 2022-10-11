@@ -12,30 +12,16 @@ import DeliveryType from "./components/delivery-type";
 import SideBar from "./components/sidebar";
 
 export default function CategoryWrapper({ classname, children }) {
-
-  const router = useRouter()
+  const router = useRouter();
   const { filteredCars, isLoading } = useFilteredCars();
   const { filteredCars: Cars } = usePaginate(filteredCars, 12);
-  const filters = useFilter(state => state.filters)
-  const setCategory = useFilter(state => state.filterCategory)
-  const setCapacity = useFilter(state => state.filterCapacity)
+  const filters = useFilter((state) => state.filters);
+  const setCategory = useFilter((state) => state.filterCategory);
+  const setCapacity = useFilter((state) => state.filterCapacity);
   const setPage = useFilter((state) => state.setPage);
   const currentPage = useFilter((state) => state.currentPage);
   // const {category, page, capacity} = router.query
-  
-  // React.useEffect(() => {
-  // const { category, page, capacity } = router.query;
 
-  //   if (
-  //     currentPage
-  //   ) {
-  //     router.push(
-  //       `${router.pathname}?page=${currentPage}`
-  //     );
-  //   } else {
-  //     router.push("/products");
-  //   }
-  // }, [currentPage]);
 
   const classes = clx("flex", classname);
   return (
@@ -45,9 +31,10 @@ export default function CategoryWrapper({ classname, children }) {
         <DeliveryType />
         <div className=''>
           <CarList />
-          {Cars?.length>0 && <div className='py-8 flex justify-center'>
-            <Paginate />
-          </div>}
+        </div>
+
+        <div className='py-8 flex justify-center'>
+          <Paginate />
         </div>
       </div>
     </div>
